@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+double height;
+const double Inch_per_feet = 12;
+
+int main(void)
+{
+    cout << "Please enter your feet:____\b\b\b\b";
+    cin >> height ;
+    double feet = floor(height / Inch_per_feet);
+    double inch = int(height) % int(Inch_per_feet);
+    cout << feet<< "feet，" << inch <<"inch"<< endl;
+
+    return 0;
+}
