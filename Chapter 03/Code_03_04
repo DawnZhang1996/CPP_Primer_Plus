@@ -1,0 +1,18 @@
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(void) {
+	cout << "Enter the number of seconds:";
+	long long seconds;
+	cin >> seconds;
+
+	int sec = seconds % 60;
+	int min = (seconds - sec)/60 % 60;
+	int hour = (seconds - min * 60 - sec)/3600 % 24;
+	int day = (seconds - hour * 60 * 60 - min * 60 - sec)/86400;
+
+	cout << seconds << "seconds = " << day << "days," << hour << "hours," << min << "mins," << sec << "seconds";
+
+	return 0;
+}
