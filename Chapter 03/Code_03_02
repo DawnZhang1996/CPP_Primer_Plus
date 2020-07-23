@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+const int feet_to_inch = 12;
+const double inch_to_meter = 0.0254;
+const double pound_to_kg = 2.2;
+
+int main(){
+	cout << "输入你的身高英尺数：____ \b\b\b\b";
+	double height_feet;
+	cin >> height_feet;
+
+	cout << "输入你的身高英寸数：____ \b\b\b\b";
+	double height_inch;
+	cin >> height_inch;
+
+	cout << "输入你的体重（磅）:____\b\b\b\b";
+	double weight;
+	cin >> weight;
+
+	double total_inch, total_meter, total_kg;
+	total_inch = height_feet * feet_to_inch + height_inch;
+	total_meter = inch_to_meter * total_inch;
+	total_kg = weight * pound_to_kg;
+
+	double BMI = total_kg / (total_meter * total_meter);
+	cout << "你的BMI为：" << BMI;
+
+	return 0;
+
+}
